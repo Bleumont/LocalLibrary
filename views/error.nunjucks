@@ -1,0 +1,5 @@
+{% extends 'layout.nunjucks' %}
+{% block content%}
+<h1>{{ error.status }}</h1>
+<h1>{{ error.stack }}</h1>
+{% endblock %}
