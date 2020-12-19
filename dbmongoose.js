@@ -13,7 +13,7 @@ dotenv.config();
 // });
 
 //Set up default mongoose connection
-var mongoDB = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.3xzkv.mongodb.net/locallibrary?retryWrites=true&w=majority`;
+var mongoDB = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.3xzkv.mongodb.net/${process.env.LIB_NAME}?retryWrites=true&w=majority`;
 mongoose.connect(mongoDB);
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
