@@ -7,6 +7,7 @@ let nunjucks = require('nunjucks');
 let bodyParser = require('body-parser');
 let dotenv = require('dotenv');
 let mongoose = require('mongoose');
+let catalogRouter = require('./routes/catalog');
 
 dotenv.config();
 let indexRouter = require('./routes/index');
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/catalog', catalogRouter);
 
 app.use(function (req, res, next) {
   let err = new Error('Not Found');
