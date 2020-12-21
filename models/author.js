@@ -1,6 +1,6 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-let Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 let AuthorSchema = new Schema({
   first_name: { type: String, required: true, max: 100 },
